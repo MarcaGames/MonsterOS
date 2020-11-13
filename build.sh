@@ -1,4 +1,6 @@
 #!/bin/bash
+mkdir -p output/bootloader;
+
 $HOME/opt/cross/bin/i686-elf-gcc -fno-PIC -ffreestanding -m16 -c bootloader/Boot.cpp -Wall -o output/bootloader/Boot.o
 $HOME/opt/cross/bin/nasm bootloader/Bootloader.asm -f elf32 -o output/bootloader/Bootloader.o
 
